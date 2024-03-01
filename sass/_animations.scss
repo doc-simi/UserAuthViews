@@ -1,0 +1,36 @@
+@keyframes L-formAnimation {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes R-formAnimation {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes delayFormContainerBoxShadow {
+  0% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: $shadow-light;
+  }
+}
+
+@keyframes delayGirlHandUpContainer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}

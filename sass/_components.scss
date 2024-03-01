@@ -1,0 +1,268 @@
+.form-container {
+  height: 40rem;
+  width: 70rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  animation: delayFormContainerBoxShadow .75s 2.2s forwards;
+  position: relative;
+}
+
+.form-img {
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  animation: R-formAnimation 1.2s .5s backwards cubic-bezier(.46,-0.35,1,-0.25);
+  
+  &__img {
+    transform: scale(1.6);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .35s cubic-bezier(0.32, 0, 0.72, 0.99);
+    
+    &:hover {
+      transform: scale(1);
+    }
+  }
+}
+
+.extra-form-container {
+  flex-basis: 55%;
+  height: 100%;
+  position: relative;
+  
+}
+
+.form {
+  height: 100%;
+  padding: 4rem;
+  background-color: #fff;
+  animation: L-formAnimation 1.2s .5s backwards cubic-bezier(.46,-0.35,1,-0.25);
+  position: relative;
+  overflow: hidden;
+
+
+  &__username, &__password {
+    display: flex;
+    flex-wrap: wrap;
+
+    &:not(:last-child) {
+      margin-bottom: $m-sm;
+    }
+  }
+
+  &__user-details {
+    margin-top: 4rem;
+  }
+
+  &__big-text {
+    text-transform: uppercase;
+    font-size: 3rem;
+  }
+
+  &__small-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  &__label {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 1rem;
+    margin-top: .5rem;
+    transition: all .15s;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 3px;
+    background-color: transparent;
+    //border-left: .35rem solid $color-tertiary;
+    background-color: $color-tertiary;
+    transform: translateY(-100%);
+    transition: transform .2s, width .5s cubic-bezier(0.81, -0.25, 0, 0.65) .22s;
+  }
+  
+  &:hover::after {
+    width: 15px;
+    transform: translateY(0);
+  }
+
+  //// THE ICONS
+  /// 
+  &__icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon {
+    height: 1.8rem;
+    width: 1.8rem;
+    fill: currentColor;
+  }
+}
+
+.username, .password {
+  padding: .6rem 1rem;
+  padding-left: 3rem;  // This gives space so that the icons can sit
+  margin-left: -2.4rem; // This negates the normal flow of display of elements, thereby allowing elements cross boundaries which then allows overlapping
+  width: 85%;
+  display: inline-block;
+  border: none;
+  font-family: inherit;
+  font-size: 1.6rem;
+  border-bottom: .16rem solid $color-tertiary;
+  background-color: transparent;
+  transition: all .2s;
+  
+  &:focus {
+    border-bottom: .16rem solid $color-secondary;
+    box-shadow: 0 .2rem .3rem rgba(0, 0, 0, .1);
+    outline: none;
+  }
+  
+  
+  &:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-2.4rem);
+  }
+}
+
+.submit {
+  background-color: $color-tertiary;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    margin-right: .5rem;
+    display: inline-block;
+  }
+}
+
+.other-options {
+  margin-top: $m-md;
+  width: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.forgot-password, .to-sign-up {
+  &:not(:last-child) {
+    margin-right: $m-sm;
+  }
+}
+
+.forgot-password__link, 
+.to-sign-up__link {
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: inherit;
+    font-weight: 500;
+    transition: all .2s;
+  }
+
+  &:hover {
+    color: $color-tertiary;
+  }
+  
+  &:active {
+    color: $color-primary;
+  }
+
+}
+
+.girl-hand-up {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  transition: right .25s, top .20s .25s, transform .85s .35s cubic-bezier(1, -0.57, 0.13, 1.16);
+  z-index: -1;
+  transform: scale(.7);
+  animation: delayGirlHandUpContainer .2s 1.5s backwards cubic-bezier(.46,-0.35,1,-0.25);
+
+
+  &__img {
+    width: 20rem;
+  }
+}
+
+.extra-form-container:hover > .girl-hand-up {
+  top: -30%;
+  right: -28%;
+  transform: scale(1.3);
+}
+
+
+//////////////////
+/// 
+// BUTTON
+.btn {
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: $m-sm;
+  position: relative;
+  z-index: 100;
+  transition: all .4s;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    z-index: -1;
+    border-radius: 4rem;
+    background-color: inherit;
+    transition: all .4s;
+  }
+
+  &:hover {
+    transform: translateY(-.8rem);
+    box-shadow: 0 .8rem 1.8rem rgba(0, 0, 0, .2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    transform: translateY(-.2rem);
+    box-shadow: 0 .5rem .8rem rgba(0,0, 0, .2);
+  }
+}
+
+//////////////////
+/// 
+// LINKS
+.links {
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    font-size: 1.7rem;
+    display: inline-block;
+  }
+}
