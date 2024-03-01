@@ -1,0 +1,5 @@
+# Ignore a directory named "build"
+/node_modules/
+
+# Ignore package-lock
+*package-lock.json
