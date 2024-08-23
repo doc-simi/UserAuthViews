@@ -5,6 +5,7 @@
   100% {
     transform: translateX(0);
   }
+  
 }
 
 
@@ -14,6 +15,27 @@
   }
   100% {
     transform: translateX(0);
+  }
+}
+
+// Mobile
+@keyframes M-L-formAnimation {
+  0% {
+    transform: translateY(30%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+  
+}
+
+
+@keyframes M-R-formAnimation {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
