@@ -7,23 +7,12 @@
   justify-content: center;
   animation: delayFormContainerBoxShadow .75s 2.2s forwards;
   position: relative;
-
-  @media only screen and (max-width: $bp-small) {
-    flex-direction: column;
-    width: 58em;
-    height: 75svh;
-
-  }
 }
 
 .sign-up-container {
   height: 60rem;
   width: 75rem;
 
-  @media only screen and (max-width: $bp-small) {
-    width: 58em;
-    height: 75vh;
-  }
 }
 
 .form-img {
@@ -31,12 +20,6 @@
   flex: 1;
   overflow: hidden;
   animation: R-formAnimation 1.2s .5s backwards cubic-bezier(.46,-0.35,1,-0.25);
-
-  @media only screen and (max-width: $bp-small) {
-    width: 100%;
-    flex: auto;
-    animation: M-R-formAnimation .75s backwards cubic-bezier(.46,-0.35,1,-0.25);
-  }
   
   &__img {
     transform: scale(1.6);
@@ -49,10 +32,6 @@
       transform: scale(1);
     }
 
-    @media only screen and (max-width: $bp-small) {
-      object-position: 0 20%;
-      transform: scale(1.3);
-    }
   }
 }
 
@@ -70,12 +49,6 @@
   animation: L-formAnimation 1.2s .5s backwards cubic-bezier(.46,-0.35,1,-0.25);
   position: relative;
   overflow: hidden;
-
-  @media only screen and (max-width: $bp-small) {
-    width: 58em;
-    animation: M-L-formAnimation .75s backwards cubic-bezier(.46,-0.35,1,-0.25);
-  }
-  
 
   &__item {
     display: flex;
@@ -396,12 +369,6 @@
   align-items: center;
   width: 70%;
   height: 40rem;
-
-  @media only screen and (max-width: $bp-small) {
-    flex-direction: column;
-    width: 58em;
-    height: 75vh;
-  }
 
   &__image-box {
     flex-basis: 50%;
