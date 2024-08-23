@@ -45,7 +45,7 @@ body {
     .form-container {
       flex-direction: column;
       width: 58em;
-      height: 75vh; } }
+      height: 75svh; } }
 
 .sign-up-container {
   height: 60rem;
