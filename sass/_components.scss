@@ -7,12 +7,21 @@
   justify-content: center;
   animation: delayFormContainerBoxShadow .75s 2.2s forwards;
   position: relative;
+
+  @media only screen and (max-width: $bp-medium) {
+    height: 75svh;
+    width: 40rem;
+    flex-direction: column;
+  }
 }
 
 .sign-up-container {
   height: 60rem;
   width: 75rem;
-
+  @media only screen and (max-width: $bp-medium) {
+    height: 75svh;
+    width: 40rem;
+  }
 }
 
 .form-img {
@@ -20,6 +29,13 @@
   flex: 1;
   overflow: hidden;
   animation: R-formAnimation 1.2s .5s backwards cubic-bezier(.46,-0.35,1,-0.25);
+
+  @media only screen and (max-width: $bp-medium) {
+    animation: M-R-formAnimation 1.2s .5s backwards cubic-bezier(.46,-0.35,1,-0.25);
+    height: auto;
+    width: 100%;
+    flex: auto;
+  }
   
   &__img {
     transform: scale(1.6);
@@ -27,6 +43,11 @@
     height: 100%;
     object-fit: cover;
     transition: all .35s cubic-bezier(0.32, 0, 0.72, 0.99);
+
+    @media only screen and (max-width: $bp-medium) {
+      object-position: 0 20%;
+      transform: scale(1.3);
+    }
     
     &:hover {
       transform: scale(1);
@@ -36,10 +57,14 @@
 }
 
 .extra-form-container {
-  flex-basis: 55%;
   height: 100%;
   position: relative;
   
+  @media only screen and (max-width: $bp-medium) {
+    height: auto;
+    width: 100%;
+   
+  }
 }
 
 .form {
@@ -49,6 +74,11 @@
   animation: L-formAnimation 1.2s .5s backwards cubic-bezier(.46,-0.35,1,-0.25);
   position: relative;
   overflow: hidden;
+
+  @media only screen and (max-width: $bp-medium) {
+    height: auto;
+    animation: M-L-formAnimation 1.2s .5s backwards cubic-bezier(.46,-0.35,1,-0.25);
+  }
 
   &__item {
     display: flex;
@@ -369,6 +399,11 @@
   align-items: center;
   width: 70%;
   height: 40rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+    width: 40rem;
+  }
 
   &__image-box {
     flex-basis: 50%;

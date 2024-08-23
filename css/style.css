@@ -9,16 +9,13 @@
   box-sizing: border-box; }
 
 html {
-  font-size: 62.5%; }
-  @media only screen and (max-width: 62.5em) {
+  font-size: 62.5%;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none; }
+  @media only screen and (max-width: 75em) {
     html {
       font-size: 50%; } }
-  @media only screen and (max-width: 53.125em) {
-    html {
-      font-size: 43.75%; } }
-  @media only screen and (max-width: 37.5em) {
-    html {
-      font-size: 32%; } }
 
 body {
   font-family: "Barlow", sans-serif;
@@ -30,7 +27,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; }
-  @media only screen and (max-width: 32em) {
+  @media only screen and (max-width: 37.5em) {
     .container {
       height: 100svh; } }
 
@@ -43,29 +40,51 @@ body {
   justify-content: center;
   animation: delayFormContainerBoxShadow .75s 2.2s forwards;
   position: relative; }
+  @media only screen and (max-width: 50em) {
+    .form-container {
+      height: 75svh;
+      width: 40rem;
+      flex-direction: column; } }
 
 .sign-up-container {
   height: 60rem;
   width: 75rem; }
+  @media only screen and (max-width: 50em) {
+    .sign-up-container {
+      height: 75svh;
+      width: 40rem; } }
 
 .form-img {
   height: 100%;
   flex: 1;
   overflow: hidden;
   animation: R-formAnimation 1.2s 0.5s backwards cubic-bezier(0.46, -0.35, 1, -0.25); }
+  @media only screen and (max-width: 50em) {
+    .form-img {
+      animation: M-R-formAnimation 1.2s 0.5s backwards cubic-bezier(0.46, -0.35, 1, -0.25);
+      height: auto;
+      width: 100%;
+      flex: auto; } }
   .form-img__img {
     transform: scale(1.6);
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: all 0.35s cubic-bezier(0.32, 0, 0.72, 0.99); }
+    @media only screen and (max-width: 50em) {
+      .form-img__img {
+        object-position: 0 20%;
+        transform: scale(1.3); } }
     .form-img__img:hover {
       transform: scale(1); }
 
 .extra-form-container {
-  flex-basis: 55%;
   height: 100%;
   position: relative; }
+  @media only screen and (max-width: 50em) {
+    .extra-form-container {
+      height: auto;
+      width: 100%; } }
 
 .form {
   height: 100%;
@@ -74,6 +93,10 @@ body {
   animation: L-formAnimation 1.2s 0.5s backwards cubic-bezier(0.46, -0.35, 1, -0.25);
   position: relative;
   overflow: hidden; }
+  @media only screen and (max-width: 50em) {
+    .form {
+      height: auto;
+      animation: M-L-formAnimation 1.2s 0.5s backwards cubic-bezier(0.46, -0.35, 1, -0.25); } }
   .form__item {
     display: flex;
     flex-wrap: wrap; }
@@ -160,7 +183,7 @@ body {
     border-radius: 50%;
     opacity: 0;
     transition: opacity .2s; }
-    @media only screen and (max-width: 62.5em) {
+    @media only screen and (max-width: 75em) {
       .form__radio-button::after {
         width: .7rem;
         height: .7rem; } }
@@ -243,7 +266,7 @@ body {
   transition: right 0.25s, top 0.2s 0.25s, transform 0.85s 0.35s cubic-bezier(1, -0.57, 0.13, 1.16);
   z-index: -1;
   animation: delayGirlHandUpContainer 0.2s 1.5s backwards cubic-bezier(0.46, -0.35, 1, -0.25); }
-  @media only screen and (max-width: 62.5em) {
+  @media only screen and (max-width: 75em) {
     .girl-hand-up {
       display: none; } }
   .girl-hand-up__img {
@@ -299,6 +322,10 @@ body {
   align-items: center;
   width: 70%;
   height: 40rem; }
+  @media only screen and (max-width: 50em) {
+    .forgot-password-container {
+      flex-direction: column;
+      width: 40rem; } }
   .forgot-password-container__image-box {
     flex-basis: 50%; }
   .forgot-password-container__image {
